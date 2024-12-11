@@ -1,12 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
-  <display-name>Projet_JEE_AQS</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>Projet_JEE_AQS</display-name>
+
+    <!-- Liste des fichiers d'accueil -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>site.jsp</welcome-file> <!-- Utiliser site.jsp comme fichier d'accueil par défaut -->
+    </welcome-file-list>
+
+    <!-- Définir la Servlet -->
+    <servlet>
+        <servlet-name>SiteServlet</servlet-name>
+        <servlet-class>be.ouagueni.servlet.SiteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SiteServlet</servlet-name>
+        <url-pattern>/site</url-pattern> <!-- Accès via /site -->
+    </servlet-mapping>
+
 </web-app>
