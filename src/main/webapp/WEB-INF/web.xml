@@ -7,7 +7,6 @@
 
     <!-- Liste des fichiers d'accueil -->
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
         <welcome-file>site.jsp</welcome-file> <!-- Utiliser site.jsp comme fichier d'accueil par défaut -->
     </welcome-file-list>
 

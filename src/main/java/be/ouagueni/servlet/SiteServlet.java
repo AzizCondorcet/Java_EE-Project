@@ -4,7 +4,6 @@ import be.project.pojo.Site;
 import be.project.dao.SiteDAO;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
@@ -18,11 +17,10 @@ public class SiteServlet extends HttpServlet {
         // Ajouter le site à l'attribut de la requête
         if (site != null) {
             request.setAttribute("site", site);
+            // Rediriger vers la JSP sous View
+            request.getRequestDispatcher("/View/JSPsite.jsp").forward(request, response); // Chemin corrigé
         } else {
             request.setAttribute("errorMessage", "Site non trouvé.");
         }
-
-        // Rediriger vers la page JSP pour afficher le résultat
-        request.getRequestDispatcher("/site.jsp").forward(request, response);
     }
 }
