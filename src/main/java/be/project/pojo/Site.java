@@ -27,6 +27,15 @@ public class Site implements Serializable{
 		this.city = city;
 		this.idSite=id;
 	}
+	public Site(String city,int id) {
+		super();
+		this.zones = new ArrayList<>();
+		this.machines = new ArrayList<>();
+		this.workers = new ArrayList<>();
+		this.maintenanceManagers = new ArrayList<>();
+		this.city = city;
+		this.idSite=id;
+	}
 	public Site() {
 		super();
 		// TODO Auto-generated constructor stub
